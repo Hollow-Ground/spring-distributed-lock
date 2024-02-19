@@ -6,8 +6,11 @@ spring:
   profiles:
     active: jdbc
   datasource:
-    url: jdbc:postgresql://${POSTGRES.HOST}:${POSTGRES.PORT:5432}/${POSTGRES.SCHEMA}
-    username: user
+#    url: jdbc:postgresql://${POSTGRES.HOST}:${POSTGRES.PORT:5432}/${POSTGRES.SCHEMA}
+#    username: user
+#    password: password
+    url: jdbc:h2:mem:testdb
+    username: sa
     password: password
   flyway:
     locations:
